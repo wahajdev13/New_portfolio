@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="output.css">
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- <link rel="stylesheet" href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,25 +23,702 @@
         nav {
             background-color: rgb(6, 6, 53);
         }
+
+        .leftsection div span {
+            color: rgb(120, 32, 219);
+        }
+
+        .right ul li a:hover {
+            color: rgb(120, 32, 219);
+            transition: 0.3s;
+        }
+
+        .first-section {
+            margin-bottom: 6rem;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <nav class="flex justify-center gap-[650px] items-center min-h-[70px]">
-            <div class="left"><Span class="text-3xl">Wahaj's portfolio</Span></div>
-            <!-- Nav Links -->
-            <div class="right items-center">
-                <ul class="flex gap-9">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">Contact Me</a></li>
+        <nav aria-label="Primary" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 min-h-[64px]">
+            <div class="flex items-center justify-between py-3">
+                <a href="index.html" class="flex items-center gap-2">
+                    <span class="text-2xl md:text-3xl font-semibold">Wahaj's portfolio</span>
+                </a>
+                <div class="hidden lg:flex items-center">
+                    <ul class="flex items-center gap-6 xl:gap-8 text-sm md:text-base">
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Home</a></li>
+                        <li><a href="#about" class="hover:text-indigo-400 transition-colors">About</a></li>
+                        <li><a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a></li>
+                        <li><a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="lg:hidden">
+                    <button id="menu-button" aria-controls="mobile-menu" aria-expanded="false" class="inline-flex items-center justify-center rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-indigo-400">
+                        <span class="sr-only">Open main menu</span>
+                        <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="lg:hidden hidden origin-top transition-all duration-200">
+                <ul class="space-y-2 pb-4 pt-2">
+                    <li><a href="#" class="block rounded-md px-4 py-3 text-base hover:bg-white/5">Home</a></li>
+                    <li><a href="#about" class="block rounded-md px-4 py-3 text-base hover:bg-white/5">About</a></li>
+                    <li><a href="#projects" class="block rounded-md px-4 py-3 text-base hover:bg-white/5">Projects</a></li>
+                    <li><a href="#contact" class="block rounded-md px-4 py-3 text-base hover:bg-white/5">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
+    <main>
+        <section class="first-section mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 items-center gap-10 lg:gap-16">
+                <div class="text-center md:text-left">
+                    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight" data-animate>Hi, I'm <span class="text-indigo-400">Wahaj Ahmad</span></h1>
+                    <p class="mt-4 text-5xl mb-3 text-slate-300" data-animate>I am a passionate</p>
+                    <p class="text-2xl sm:text-3xl lg:text-4xl font-medium" data-animate>Web Developer</p>
+                    <div class="mt-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 justify-center md:justify-start" data-animate>
+                        <a href="#" class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400">Explore Projects</a>
+                        <a href="#" class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-white/10 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400">Contact Me</a>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <img src="assets/images/dev.png" alt="Developer illustration" class="w-full h-auto max-h-[420px] md:max-h-[480px] object-contain" loading="eager" data-animate>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" aria-labelledby="about-title" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+            <p class="text-indigo-400/80 text-sm tracking-wide" data-animate>Who I Am</p>
+            <h2 id="about-title" class="font-semibold text-3xl sm:text-4xl" data-animate>About Me</h2>
+
+            <div id="about-a" class="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 ab-variant" aria-label="About variant A">
+                <div class="space-y-6 text-slate-200" data-animate>
+                    <p class="text-lg sm:text-xl">My name is Wahaj Ahmad.</p>
+                    <p class="text-base sm:text-lg">I’m 13 years old and in 8th class. I’m learning HTML, CSS, JavaScript, and Python. I work with Tailwind CSS and Figma, and I’ve built a Shopify store and know how to set up Shopify projects.</p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
+                            <svg class="h-6 w-6 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 7h16M4 12h12M4 17h8" stroke-linecap="round"/></svg>
+                            <div>
+                                <div class="font-medium">Learning the web stack</div>
+                                <p class="text-sm text-slate-300">HTML, CSS, JavaScript, and Python.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
+                            <svg class="h-6 w-6 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 12h18M12 3v18" stroke-linecap="round"/></svg>
+                            <div>
+                                <div class="font-medium">Tools I use</div>
+                                <p class="text-sm text-slate-300">Tailwind CSS and Figma.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
+                            <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            <div>
+                                <div class="font-medium">Shopify experience</div>
+                                <p class="text-sm text-slate-300">Built a store and set up projects.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3 rounded-lg border border-white/10 bg-white/5 p-4 transition hover:bg-white/10">
+                            <svg class="h-6 w-6 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5-6.5 4.5 2-7L2 9h7z" stroke-linejoin="round"/></svg>
+                            <div>
+                                <div class="font-medium">Attitude & motion</div>
+                                <p class="text-sm text-slate-300">Never-give-up; love visual effects and UI animations.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-3">
+                        <div class="text-sm text-slate-300">I’m building practical projects like:</div>
+                        <ul class="list-disc pl-5 space-y-1 text-sm text-slate-300">
+                            <li>Shopify store setups</li>
+                            <li>Front-end websites</li>
+                            <li>My own Jarvis AI assistant</li>
+                        </ul>
+                    </div>
+
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" data-about-cta class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition">
+                            Hire Me
+                            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+                        </a>
+                        <a href="#projects" data-about-cta class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-white/10 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition">
+                            View Work
+                        </a>
+                    </div>
+                </div>
+
+                <div class="space-y-6" data-animate>
+                    <div class="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2">
+                        <img src="assets/images/dev2.jpg" alt="Portrait of Wahaj Ahmad" class="w-full h-auto object-cover sm:max-h-[360px] md:max-h-[420px]" loading="lazy">
+                    </div>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                            <div class="text-2xl font-semibold text-indigo-300">13</div>
+                            <div class="text-xs text-slate-300">Years old</div>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                            <div class="text-2xl font-semibold text-indigo-300">8th</div>
+                            <div class="text-xs text-slate-300">Class</div>
+                        </div>
+                        <div class="rounded-lg border border-white/10 bg-white/5 p-4">
+                            <div class="text-2xl font-semibold text-indigo-300">Shopify</div>
+                            <div class="text-xs text-slate-300">Store built</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="about-b" class="mt-10 ab-variant" aria-label="About variant B">
+                <div class="rounded-2xl border border-white/10 bg-gradient-to-tr from-indigo-500/10 via-transparent to-sky-400/10 p-6 sm:p-8">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-start">
+                        <div class="lg:col-span-1" data-animate>
+                            <div class="relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2">
+                                <img src="assets/images/dev.png" alt="Developer at work" class="w-full h-auto object-contain max-h-[300px]" loading="lazy">
+                            </div>
+                            <blockquote class="mt-6 text-sm text-slate-300">"I stay consistent and focused when solving problems, and I don’t give up easily during challenges."</blockquote>
+                        </div>
+                        <div class="lg:col-span-2 space-y-6" data-animate>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="h-6 w-6 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 7h16M4 12h12M4 17h8" stroke-linecap="round"/></svg>
+                                        <div class="font-medium">Learning</div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-slate-300">HTML, CSS, JavaScript, and Python.</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="h-6 w-6 text-sky-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 12h18M12 3v18" stroke-linecap="round"/></svg>
+                                        <div class="font-medium">Tools</div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-slate-300">Tailwind CSS and Figma.</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="h-6 w-6 text-emerald-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12l4 4L19 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                        <div class="font-medium">Shopify</div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-slate-300">Store built; project setup experience.</p>
+                                </div>
+                                <div class="rounded-xl border border-white/10 bg-white/5 p-5">
+                                    <div class="flex items-center gap-3">
+                                        <svg class="h-6 w-6 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3 7h7l-5.5 4 2 7-6.5-4.5-6.5 4.5 2-7L2 9h7z" stroke-linejoin="round"/></svg>
+                                        <div class="font-medium">UI Animations</div>
+                                    </div>
+                                    <p class="mt-2 text-sm text-slate-300">Visual effects and smooth interactions.</p>
+                                </div>
+                            </div>
+
+                            <div class="space-y-3">
+                                <div class="text-sm text-slate-300">I’m building practical projects like:</div>
+                                <ul class="list-disc pl-5 space-y-1 text-sm text-slate-300">
+                                    <li>Shopify store setups</li>
+                                    <li>Front-end websites</li>
+                                    <li>My own Jarvis AI assistant</li>
+                                </ul>
+                                <div class="text-xs text-slate-400">Skills also include basic 3D modeling in Blender (not my main focus).</div>
+                            </div>
+
+                            <div class="flex flex-wrap gap-4">
+                                <a href="#contact" data-about-cta class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition">Work With Me</a>
+                                <a href="#projects" data-about-cta class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-white/10 text-white hover:bg-white/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition">See Projects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-0 m-12 bg-[#9c97f1] h-[1.3px]">
+
+        <section id="projects" class="projects-section max-w-7xl mx-auto px-6 lg:px-16 py-16" aria-labelledby="projects-title">
+            <p class="text-indigo-400/80 text-sm tracking-wide" data-animate>Featured Projects</p>
+            <h2 id="projects-title" class="font-semibold text-3xl sm:text-4xl" data-animate>My Projects</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" role="list" aria-label="Project list">
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" role="listitem" aria-label="Previous Portfolio Website" data-animate>
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-lg border border-white/10 h-40">
+                            <img src="assets/images/portfolio.jpeg" alt="Previous Portfolio Website thumbnail" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-medium">Previous Portfolio Website</h3>
+                            <span class="text-xs text-slate-300">Created 1.5 years ago</span>
+                        </div>
+                        <p class="text-sm text-slate-300">My initial portfolio showcasing early web development work and design skills.</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://wahajdev13.github.io/portfolio/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition-colors" role="button" aria-label="Open live demo: Previous Portfolio Website">
+                                Live Demo
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" role="listitem" aria-label="Age Calculator" data-animate>
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-lg border border-white/10 h-40">
+                            <img src="assets/images/Age.jpeg" alt="Age Calculator thumbnail" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-medium">Age Calculator</h3>
+                            <span class="text-xs text-slate-300">Created 3 years ago</span>
+                        </div>
+                        <p class="text-sm text-slate-300">A tool that calculates exact age in years, months, and days based on birthdate input.</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://wahajdev13.github.io/agecalculator" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition-colors" role="button" aria-label="Open live demo: Age Calculator">
+                                Live Demo
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" role="listitem" aria-label="Simple Calculator" data-animate>
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-lg border border-white/10 h-40">
+                            <img src="assets/images/Calculator.jpg" alt="Simple Calculator thumbnail" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-medium">Simple Calculator</h3>
+                            <span class="text-xs text-slate-300">Created 3 years ago</span>
+                        </div>
+                        <p class="text-sm text-slate-300">Basic calculator application handling addition, subtraction, multiplication, and division operations.</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://wahajdev13.github.io/Simple_calculator" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition-colors" role="button" aria-label="Open live demo: Simple Calculator">
+                                Live Demo
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" role="listitem" aria-label="Currency Converter (needs fix)" data-animate>
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-lg border border-white/10 h-40">
+                            <img src="assets/images/Currency converter.jpg" alt="Currency Converter thumbnail" class="w-full h-full object-cover" loading="lazy">
+                            <span class="absolute top-2 right-2 text-[11px] px-2 py-1 rounded-full bg-amber-500/20 text-amber-300" aria-label="Currently not accurate">Needs Fix</span>
+                        </div>
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-medium">Currency Converter</h3>
+                            <span class="text-xs text-slate-300">Status: Inaccurate</span>
+                        </div>
+                        <p class="text-sm text-slate-300">A currency conversion tool between major world currencies. Included despite current issues.</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://wahajdev13.github.io/Currency_Converter/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium bg-slate-700 text-white hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition-colors" role="button" aria-label="Open demo: Currency Converter (currently inaccurate)">
+                                Live Demo
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" role="listitem" aria-label="OffMenu Design Clone" data-animate>
+                    <div class="space-y-4">
+                        <div class="relative overflow-hidden rounded-lg border border-white/10 h-40">
+                            <img src="assets/logos/Logo.svg" alt="OffMenu Design Clone thumbnail" class="w-full h-full " loading="lazy">
+                        </div>
+                        <div class="flex items-start justify-between">
+                            <h3 class="text-xl font-medium">OffMenu Design Clone</h3>
+                            <span class="text-xs text-slate-300">Created 15 days ago</span>
+                        </div>
+                        <p class="text-sm text-slate-300">Source code recreation of the offmenue.design homepage as a learning exercise.</p>
+                        <div class="flex flex-wrap items-center gap-3">
+                            <a href="https://github.com/wahajdev13/Off-Menu" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium bg-slate-700 text-white hover:bg-slate-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition-colors" role="button" aria-label="Open source: OffMenu Design Clone">
+                                View Source
+                                <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17l10-10M7 7h10v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <hr class="border-0 m-12 bg-[#9c97f1] h-[1.3px]">
+
+        <section class="skills-section max-w-7xl mx-auto px-6 lg:px-16 py-16" aria-labelledby="skills-title">
+            <p class="text-indigo-400/80 text-sm tracking-wide" data-animate>What I’ve Done So Far</p>
+            <h2 id="skills-title" class="font-semibold text-3xl sm:text-4xl" data-animate>Skills & Experience</h2>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8" role="list" aria-label="Skill categories">
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" aria-label="Web Development" data-animate>
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M8 6l-5 6 5 6M16 6l5 6-5 6" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        <h3 class="text-xl font-medium">Web Development</h3>
+                    </div>
+                    <ul class="mt-4 space-y-4" role="list">
+                        <li>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm">HTML & CSS</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-indigo-500/10 text-indigo-300" aria-label="3 years experience">3 yrs</span>
+                            </div>
+                            <div class="mt-2 h-2 rounded-full bg-slate-700" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="HTML & CSS proficiency">
+                                <div class="h-2 rounded-full bg-indigo-500 w-5/6"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm">JavaScript</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-300" aria-label="Currently learning">Learning</span>
+                            </div>
+                            <div class="mt-2 h-2 rounded-full bg-slate-700" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="JavaScript proficiency">
+                                <div class="h-2 rounded-full bg-yellow-400 w-2/5"></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm">Tailwind CSS</span>
+                                <span class="text-xs px-2 py-1 rounded-full bg-blue-500/10 text-blue-300" aria-label="Currently learning">Learning</span>
+                            </div>
+                            <div class="mt-2 h-2 rounded-full bg-slate-700" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" aria-label="Tailwind CSS proficiency">
+                                <div class="h-2 rounded-full bg-blue-400 w-2/5"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" aria-label="3D Modeling" data-animate>
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M12 3l8 4v10l-8 4-8-4V7l8-4z" stroke-linejoin="round"/>
+                            <path d="M12 3v18" stroke-linecap="round"/>
+                        </svg>
+                        <h3 class="text-xl font-medium">3D Modeling</h3>
+                    </div>
+                    <p class="mt-2 text-sm text-slate-300">Blender</p>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="text-xs px-2 py-1 rounded-full bg-yellow-500/10 text-yellow-300" aria-label="Currently learning">Learning</span>
+                        <span class="text-sm">Progress</span>
+                    </div>
+                    <div class="mt-2 h-2 rounded-full bg-slate-700" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" aria-label="Blender proficiency">
+                        <div class="h-2 rounded-full bg-indigo-500 w-1/3"></div>
+                    </div>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" aria-label="E-commerce (Shopify)" data-animate>
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M3 7h18l-2 10H5L3 7z" stroke-linejoin="round"/>
+                            <circle cx="9" cy="19" r="1"/>
+                            <circle cx="17" cy="19" r="1"/>
+                        </svg>
+                        <h3 class="text-xl font-medium">E-commerce</h3>
+                    </div>
+                    <p class="mt-2 text-sm text-slate-300">Shopify Store Development</p>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300" aria-label="Completed project">Completed</span>
+                        <span class="text-sm">Proficiency</span>
+                    </div>
+                    <div class="mt-2 h-2 rounded-full bg-slate-700" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Shopify proficiency">
+                        <div class="h-2 rounded-full bg-emerald-400 w-4/5"></div>
+                    </div>
+                </article>
+
+                <article class="group rounded-xl border border-white/10 bg-white/5 p-6 transition-transform duration-200 hover:scale-[1.02] hover:border-indigo-500/40 hover:bg-white/10" aria-label="Python Programming" data-animate>
+                    <div class="flex items-center gap-3">
+                        <svg class="h-6 w-6 text-indigo-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M12 4c-4 0-4 3-4 3v4h8V7s0-3-4-3zM12 20c4 0 4-3 4-3v-4H8v4s0 3 4 3z" stroke-linejoin="round"/>
+                        </svg>
+                        <h3 class="text-xl font-medium">Python Programming</h3>
+                    </div>
+                    <div class="mt-3 flex items-center justify-between">
+                        <span class="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-300" aria-label="Completed learning">Completed</span>
+                        <span class="text-sm">Proficiency</span>
+                    </div>
+                    <div class="mt-2 h-2 rounded-full bg-slate-700" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" aria-label="Python proficiency">
+                        <div class="h-2 rounded-full bg-indigo-500 w-4/5"></div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="contact" aria-labelledby="contact-title" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+            <p class="text-indigo-400/80 text-sm tracking-wide flex justify-center" data-animate>Get In Touch</p>
+            <h2 id="contact-title" class="font-semibold text-3xl sm:text-4xl flex justify-center" data-animate>Contact Me</h2>
+            <div class="mt-8 max-w-2xl mx-auto">
+                <div class="rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm p-6 sm:p-8" data-animate>
+                    <form id="contact-form" role="form" aria-describedby="contact-help" novalidate class="space-y-6">
+                        <p id="contact-help" class="text-sm text-slate-300">Feel free to reach out. I usually reply within 24–48 hours.</p>
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium">Name</label>
+                            <input id="name" name="name" type="text" autocomplete="name" required minlength="2" maxlength="60" aria-required="true" aria-invalid="false" aria-describedby="name-error" class="mt-2 w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 sm:py-3.5 text-base sm:text-lg placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition" placeholder="Your full name">
+                            <p id="name-error" class="mt-2 text-sm text-rose-300 hidden">Please enter 2–60 characters.</p>
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium">Email</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required aria-required="true" aria-invalid="false" aria-describedby="email-error" class="mt-2 w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 sm:py-3.5 text-base sm:text-lg placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition" placeholder="you@example.com">
+                            <p id="email-error" class="mt-2 text-sm text-rose-300 hidden">Enter a valid email address.</p>
+                        </div>
+
+                        <div>
+                            <div class="flex items-baseline justify-between">
+                                <label for="message" class="block text-sm font-medium">Message</label>
+                                <span id="message-count" class="text-xs text-slate-400">0 / 500</span>
+                            </div>
+                            <textarea id="message" name="message" rows="5" required minlength="10" maxlength="500" aria-required="true" aria-invalid="false" aria-describedby="message-error message-count" class="mt-2 w-full rounded-lg bg-white/5 border border-white/10 px-4 py-3 sm:py-3.5 text-base sm:text-lg placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-indigo-400 transition resize-y" placeholder="Tell me about your project or question..."></textarea>
+                            <p id="message-error" class="mt-2 text-sm text-rose-300 hidden">Message must be 10–500 characters.</p>
+                        </div>
+
+                        <input type="text" name="company" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+
+                        <div class="flex items-center gap-4">
+                            <button type="submit" id="contact-submit" class="inline-flex items-center gap-2 rounded-md px-5 py-3 text-sm font-medium bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-indigo-400 transition disabled:opacity-60 disabled:cursor-not-allowed">
+                                <span>Send Message</span>
+                                <svg id="submit-spinner" class="hidden h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10" opacity="0.25"/><path d="M12 2a10 10 0 0 1 10 10"/></svg>
+                            </button>
+                            <span id="submit-status" role="status" aria-live="polite" class="text-sm"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+        <script>
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (menuButton && mobileMenu) {
+            menuButton.addEventListener('click', () => {
+                const expanded = menuButton.getAttribute('aria-expanded') === 'true';
+                menuButton.setAttribute('aria-expanded', String(!expanded));
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        const form = document.getElementById('contact-form');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const nameError = document.getElementById('name-error');
+        const emailError = document.getElementById('email-error');
+        const messageError = document.getElementById('message-error');
+        const countEl = document.getElementById('message-count');
+        const submitBtn = document.getElementById('contact-submit');
+        const spinner = document.getElementById('submit-spinner');
+        const statusEl = document.getElementById('submit-status');
+
+        function setInvalid(input, errorEl, message) {
+            input.setAttribute('aria-invalid', 'true');
+            errorEl.textContent = message;
+            errorEl.classList.remove('hidden');
+        }
+
+        function clearInvalid(input, errorEl) {
+            input.setAttribute('aria-invalid', 'false');
+            errorEl.classList.add('hidden');
+        }
+
+        function validateName() {
+            const v = nameInput.value.trim();
+            if (v.length < 2 || v.length > 60) {
+                setInvalid(nameInput, nameError, 'Please enter 2–60 characters.');
+                return false;
+            }
+            clearInvalid(nameInput, nameError);
+            return true;
+        }
+
+        function validateEmail() {
+            const v = emailInput.value.trim();
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!re.test(v)) {
+                setInvalid(emailInput, emailError, 'Enter a valid email address.');
+                return false;
+            }
+            clearInvalid(emailInput, emailError);
+            return true;
+        }
+
+        function validateMessage() {
+            const v = messageInput.value.trim();
+            if (v.length < 10 || v.length > 500) {
+                setInvalid(messageInput, messageError, 'Message must be 10–500 characters.');
+                return false;
+            }
+            clearInvalid(messageInput, messageError);
+            return true;
+        }
+
+        function updateCount() {
+            const len = messageInput.value.length;
+            countEl.textContent = `${len} / 500`;
+        }
+
+        if (form) {
+            messageInput.addEventListener('input', updateCount);
+            nameInput.addEventListener('blur', validateName);
+            emailInput.addEventListener('blur', validateEmail);
+            messageInput.addEventListener('blur', validateMessage);
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                statusEl.textContent = '';
+                const ok = validateName() & validateEmail() & validateMessage();
+                if (!ok) return;
+                submitBtn.disabled = true;
+                spinner.classList.remove('hidden');
+                form.setAttribute('aria-busy', 'true');
+                setTimeout(() => {
+                    spinner.classList.add('hidden');
+                    submitBtn.disabled = false;
+                    form.removeAttribute('aria-busy');
+                    statusEl.textContent = 'Message sent successfully!';
+                    statusEl.className = 'text-sm text-emerald-300';
+                    form.reset();
+                    updateCount();
+                }, 1200);
+            });
+
+            updateCount();
+        }
+
+        (function () {
+            const aboutA = document.getElementById('about-a');
+            const aboutB = document.getElementById('about-b');
+            const key = 'ab_about_variant';
+            const qp = new URLSearchParams(location.search);
+            const param = qp.get('variant');
+            let v = (param && /about-(a|b)/.test(param)) ? param.split('-')[1] : localStorage.getItem(key);
+            if (!v || !['a', 'b'].includes(v)) v = Math.random() < 0.5 ? 'a' : 'b';
+            localStorage.setItem(key, v);
+            if (aboutA && aboutB) {
+                aboutA.classList.toggle('hidden', v !== 'a');
+                aboutB.classList.toggle('hidden', v !== 'b');
+                incMetric('impression', v);
+            }
+
+            function incMetric(type, variant) {
+                const k = `ab_about_${type}_${variant}`;
+                const n = parseInt(localStorage.getItem(k) || '0', 10) + 1;
+                localStorage.setItem(k, String(n));
+            }
+
+            document.querySelectorAll('[data-about-cta]').forEach((btn) => {
+                btn.addEventListener('click', () => incMetric('cta_click', v));
+            });
+
+            const io = new IntersectionObserver((entries) => {
+                entries.forEach((e) => {
+                    if (e.isIntersecting) {
+                        e.target.classList.remove('opacity-0', 'translate-y-4');
+                        e.target.classList.add('opacity-100', 'translate-y-0');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+            document.querySelectorAll('[data-animate]').forEach((el) => {
+                el.classList.add('opacity-0', 'translate-y-4', 'transition-all', 'duration-500');
+                io.observe(el);
+            });
+
+            if (qp.get('debug_ab') === '1') {
+                const panel = document.createElement('div');
+                panel.className = 'fixed bottom-4 right-4 text-xs rounded-lg border border-white/10 bg-white/10 backdrop-blur p-3';
+                const aImp = localStorage.getItem('ab_about_impression_a') || '0';
+                const bImp = localStorage.getItem('ab_about_impression_b') || '0';
+                const aCta = localStorage.getItem('ab_about_cta_click_a') || '0';
+                const bCta = localStorage.getItem('ab_about_cta_click_b') || '0';
+                panel.innerHTML = '<div class="font-medium mb-2">About A/B</div>' +
+                    `<div>A impressions: ${aImp}</div>` +
+                    `<div>B impressions: ${bImp}</div>` +
+                    `<div>A CTA clicks: ${aCta}</div>` +
+                    `<div>B CTA clicks: ${bCta}</div>`;
+                document.body.appendChild(panel);
+            }
+        })();
+
+        (function () {
+            const duration = 650;
+            const barId = 'scroll-progress';
+            let bar = document.getElementById(barId);
+            if (!bar) {
+                bar = document.createElement('div');
+                bar.id = barId;
+                bar.className = 'fixed top-0 left-0 h-1 bg-indigo-500/80 w-0 z-50 pointer-events-none';
+                document.body.appendChild(bar);
+            }
+
+            function ease(t) {
+                return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+            }
+
+            function focusTarget(el) {
+                let f = el;
+                const lbl = el.getAttribute('aria-labelledby');
+                if (lbl) {
+                    const h = document.getElementById(lbl);
+                    if (h) f = h;
+                }
+                const prev = f.getAttribute('tabindex');
+                if (!prev) f.setAttribute('tabindex', '-1');
+                f.focus({ preventScroll: true });
+            }
+
+            function animateTo(y, d) {
+                const startY = window.pageYOffset;
+                const maxY = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+                const endY = Math.min(Math.max(0, y), maxY);
+                const dist = Math.abs(endY - startY);
+                const dur = dist < 24 ? Math.max(120, d * 0.35) : d;
+                if (dist < 2) return Promise.resolve();
+                return new Promise((resolve) => {
+                    const t0 = performance.now();
+                    function step(t) {
+                        const p = Math.min(1, (t - t0) / dur);
+                        const e = ease(p);
+                        const cur = startY + (endY - startY) * e;
+                        window.scrollTo(0, cur);
+                        bar.style.width = `${Math.round(p * 100)}%`;
+                        if (p < 1) requestAnimationFrame(step);
+                        else {
+                            bar.style.width = '0%';
+                            resolve();
+                        }
+                    }
+                    requestAnimationFrame(step);
+                });
+            }
+
+            function handle(e) {
+                const a = e.currentTarget;
+                const href = a.getAttribute('href') || '';
+                if (!href.startsWith('#')) return;
+                e.preventDefault();
+                const hash = href === '#' ? '' : href.slice(1);
+                const target = hash ? document.getElementById(hash) : document.body;
+                if (!target) return;
+                const rect = target.getBoundingClientRect();
+                const y = rect.top + window.pageYOffset;
+                animateTo(y, duration).then(() => {
+                    if (href === '#') {
+                        history.pushState(null, '', location.pathname);
+                    } else {
+                        history.pushState(null, '', `#${hash}`);
+                    }
+                    focusTarget(target);
+                });
+                const mm = document.getElementById('mobile-menu');
+                const mb = document.getElementById('menu-button');
+                if (mm && !mm.classList.contains('hidden')) {
+                    mm.classList.add('hidden');
+                    if (mb) mb.setAttribute('aria-expanded', 'false');
+                }
+            }
+
+            const sels = ['nav a[href^="#"]', '#mobile-menu a[href^="#"]'];
+            const anchors = document.querySelectorAll(sels.join(','));
+            anchors.forEach((a) => {
+                a.addEventListener('click', handle);
+                a.addEventListener('touchstart', handle, { passive: false });
+            });
+        })();
+        </script>
 </body>
 
 </html>
