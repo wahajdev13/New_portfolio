@@ -2,7 +2,7 @@
 
 Student Name: Wahaj Ahmad
 Student ID: 661969
-Course: Web Engineering / Web Development
+Course: Web : Web Development
 Instructor: Sir Umer Sajid
 
 ## Project Summary
@@ -15,8 +15,13 @@ Figma Design (.fig file): https://drive.google.com/file/d/1zSUaWnqimMJUybPEOS-cH
 
 Full Project Documentation (Google Docs): https://docs.google.com/document/d/1AB9yzNOm_Lq_7uVg7D9DKa6XDODlAX9JXfOa2OJ8pVw/edit?usp=sharing
 
+
+## Project Media Assets 
+(Google Drive): https://drive.google.com/drive/folders/15YICKB87_qN83dYUNhiHVISv1V2NQtDU?usp=sharing
+
+
 ## Live Preview
-[GitHub Pages / Vercel Link]
+Not Available
 
 ## **Technologies Used**
 
