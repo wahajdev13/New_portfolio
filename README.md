@@ -95,9 +95,8 @@ Not Available
 
 * Purpose: To create an online portfolio showcasing personal and professional skills.
 * Target Audience: Employers, recruiters, clients, and visitors.
-* Included Sections: About, Skills, Projects, Contact, Resume Link.
+* Included Sections: About, Skills, Projects, Contact.
 * Layout Style: One-page layout for faster navigation and modern feel.
-* References (3): Various portfolio templates, Dribbble UI shots, GitHub portfolio examples.
 
 ## **2. Designing and Prototyping**
 
