@@ -21,7 +21,7 @@ Full Project Documentation (Google Docs): https://docs.google.com/document/d/1AB
 
 
 ## Live Preview
-Not Available
+https://wahajdev13.github.io/Live_portfolio/
 
 ## **Technologies Used**
 
@@ -118,7 +118,7 @@ Not Available
 * Screenshots included in Docs.
 * Challenges: Tailwind config setup, responsive spacing adjustments.
 * Solved via documentation and iterative testing.
-* GitHub Repository Link: *[Add link here]*
+* GitHub Repository Link: *https://github.com/wahajdev13/Advanced_Portfolio*
 * Drive link for media: Included above.
 
 ## **5. Documentation – SDLC Report**
